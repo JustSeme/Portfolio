@@ -1,0 +1,195 @@
+body {
+    font-size: 16px;
+    line-height: 1.56;
+    font-family: "Roboto", sans-serif;
+    color: #252525;
+}
+
+.header {
+    padding: 20px 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 1000;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.row {
+    display: flex;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.col-xs-8 {
+    float: left;
+    width: 66.66666667%;
+}
+
+.main-menu {
+    text-align: right;
+}
+
+.main-menu ul.list-inline {
+    margin-right: -5px;
+}
+
+.main-menu ul li {
+    margin: 8px 0 10px 20px;
+}
+
+.main-menu ul li a {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    line-height: 1.66;
+}
+
+a {
+    color: inherit;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+    margin-left: 5px;
+}
+
+ul {
+    margin: 0;
+}
+
+.list-inline>li {
+    display: inline-block;
+    padding: 5px 0;
+}
+
+.col-md-9,
+.col-xs-8,
+.col-md-3,
+.col-xs-4 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+}
+
+.mob-menu-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    z-index: 9999;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    transform: translateY(100%);
+    padding: 0 20px;
+    background: #3333ff;
+}
+
+.close-mob-menu {
+    width: 20px;
+    height: 20px;
+    padding: 3px 2px 2px;
+    position: absolute;
+    top: 13px;
+    right: 22px;
+    z-index: 5;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.mdi-close:before {
+    content: "\F156";
+    display: inline-block;
+    font: normal normal normal 24px/1 "Material Design Icons";
+    font-size: inherit;
+    text-rendering: auto;
+    line-height: inherit;
+    -webkit-font-smoothing: antialiased;
+}
+
+.mobile-menu {
+    height: 100%;
+    overflow: auto;
+    text-align: center;
+}
+
+.mobile-menu ul {
+    padding: 30px 0;
+    margin: 0;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    min-height: 100%;
+}
+
+@media screen and (max-width: 991px) {
+    .header {
+        padding: 10px 0 15px;
+    }
+
+    body {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+
+    .col-md-3 {
+        width: 25%;
+        float: left;
+    }
+
+    .col-md-9 {
+        width: 75%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+
+    .hidden-lg {
+        display: none !important;
+    }
+}
