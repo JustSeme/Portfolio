@@ -96,7 +96,8 @@ a {
 .col-md-4,
 .col-md-8,
 .col-md-6,
-.col-md-12 {
+.col-md-12,
+.col-md-5 {
     position: relative;
     min-height: 1px;
     padding-left: 15px;
@@ -196,7 +197,7 @@ section {
 
 .about-img-wrap .about-img {
     position: relative;
-    padding-bottom: 56.2%;;
+    padding-bottom: 56.2%;
 }
 
 .about-img-wrap .about-img img {
@@ -362,6 +363,206 @@ hr {
     opacity: 0.8;
 }
 
+.about-row .opacity-box {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.section.section-small-padding {
+    padding: 40px 0 10px;
+}
+
+.section-title {
+    margin-bottom: 20px;
+}
+
+.portfolio-sort {
+    margin-bottom: 20px;
+    white-space: nowrap;
+    position: relative;
+}
+
+.portfolio-sort ul {
+    overflow: auto;
+    font-size: 0;
+}
+
+.colored-link {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.portfolio-sort ul li {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: "Latio" sans-serif;
+    font-weight: 700;
+    line-height: 1.66;
+    margin: 0 25px 0 0;
+    vertical-align: top;
+}
+
+.list-inline>li {
+    display: inline-block;
+    padding: 5px 0;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.mixitup-control-active {
+    color: #3333ff;
+}
+
+.portfolio-box {
+    display: block;
+    margin: 0 auto 30px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    height: auto;
+}
+
+.portfolio-box .portfolio-img {
+    margin-bottom: 10px;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.portfolio-box .portfolio-img img {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+img {
+    border-radius: 2px;
+    vertical-align: middle;
+    border: 0;
+}
+
+.portfolio-box .portfolio-name {
+    font-weight: 700;
+    font-family: "Latio", sans-serif;
+    font-size: 18px;
+    line-height: 1.55;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 2px;
+}
+
+.portfolio-box .portfolio-date {
+    opacity: 0.8;
+}
+
+.form-wrapper .form-group {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+.form-wrapper input[type=text], .form-wrapper input[type=email] {
+    font-size: 14px;
+    font-family: "Latio", sans-serif;
+    line-height: 1.4;
+
+    height: 50px;
+    width: 100%;
+    border: 1px solid #e3e3e3;
+    border-radius: 2px;
+    padding: 0 20px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.form-wrapper .form-group .form-validation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 2px;
+    border: 2px solid #3333ff;
+    pointer-events: none;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.form-wrapper .form-group span {
+    color: #ff4669;
+    position: absolute;
+    top: 14px;
+    text-align: right;
+    opacity: 0;
+    right: 20px;
+}
+
+.form-wrapper input[type=text][data-touched=true]:invalid
+~ .form-invalid-icon, .form-wrapper input[type=email][data-touched=true]:invalid
+~ .form-invalid-icon {
+    opacity: 1.0;
+}
+
+.form-wrapper textarea {
+    font-size: 14px;
+    font-family: "Latio", sans-serif;
+    line-height: 1.4;
+
+    height: 100px;
+    width: 100%;
+    border: 1px solid #e3e3e3;
+    padding: 15px 20px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    resize: none;
+    display: block;
+    border-radius: 2px;
+    margin-left: 50px;
+}
+
+textarea {
+    overflow: auto;
+}
+
+.form-wrapper .submit-holder {
+    text-align: right;
+    margin-left: 160px;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .col-sm-6 {
+        float: left;
+    }
+    .col-sm-6 {
+        width: 50%;
+    }
+}
+
 @media screen and (max-width: 991px) {
     .header {
         padding: 10px 0 15px;
@@ -371,9 +572,14 @@ hr {
         font-size: 14px;
         line-height: 1.4;
     }
+
     .logo {
         font-size: 18px;
         margin-top: 5px;
+    }
+
+    .portfolio-box {
+        max-width: 270px;
     }
 }
 
@@ -388,7 +594,8 @@ hr {
     .col-md-4,
     .col-md-3,
     .col-md-9,
-    .col-md-12 {
+    .col-md-12,
+    .col-md-5 {
         float: left;
     }
 
@@ -418,6 +625,10 @@ hr {
 
     .col-md-12 {
         width: 100%;
+    }
+
+    .col-md-5 {
+        width: 41.66666667%;
     }
 }
 
