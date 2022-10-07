@@ -7,7 +7,6 @@ jQuery(document).ready(function () {
 		if (form.valid()) {
 			//form.css('opacity', '.5');
 			var actUrl = form.attr('action');
-			console.log(actUrl);
 
 			jQuery.ajax({
 				url: actUrl,

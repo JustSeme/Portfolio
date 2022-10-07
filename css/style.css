@@ -597,6 +597,11 @@ textarea {
   overflow: auto;
 }
 
+.not-worked {
+  padding-bottom: 10px;
+  color: #ff4669;
+}
+
 .form-wrapper .submit-holder {
   text-align: right;
 }
