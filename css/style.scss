@@ -43,7 +43,11 @@ body {
     font-size: 24px;
     font-family: "Latio", sans-serif;
     font-weight: 700;
+}
 
+.point::after {
+    content: ".";
+    color: #ff4669;
 }
 
 .main-menu {
@@ -178,15 +182,37 @@ a {
 }
 
 .section {
+    position: relative;
     padding: 40px 0;
+    /* border-top: 80px solid transparent;
+    margin-top: 80px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box; */
     border-top: 1px solid #e3e3e3;
+}
+
+.section::before {
+    /* content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #e3e3e3; */
+}
+
+.anchor {
+    display: block;
+    height: 80px;
+    margin-top: -80px;
+    visibility: hidden;
 }
 
 section {
     display: block;
 }
 
-#hello {
+section#hello {
     margin-top: 80px;
     border: none;
 }
@@ -270,6 +296,33 @@ ul, ol, h1, h2, h3, h4, h5, h6, p {
 
 .span-title + .span-icons {
     opacity: 1.0;
+}
+
+.about-me-info a.font-icons {
+    padding-right: 20px;
+    margin-bottom: 5px;
+    min-width: 16px;
+    text-align: center;
+}
+
+.fonts-icons {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.mdi::before, .mdi-set {
+    display: inline-block;
+    font: normal normal normal 24px/1 "Matherial Design Icons";
+    font-size: inherit;
+    text-rendering: auto;
+    line-height: inherit;
+    -webkit-font-smoothing: antialiased;
+}
+
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .about-btns .site-btn {
@@ -414,6 +467,11 @@ hr {
     cursor: pointer;
 }
 
+.list-inline li a {
+    display: block;
+    text-align: center;
+}
+
 .mixitup-control-active {
     color: #3333ff;
 }
@@ -552,6 +610,25 @@ textarea {
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
     -webkit-appearance: button;
     cursor: pointer;
+}
+
+.footer {
+    background: #efefef;
+    padding: 15px 0 15px;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+
+.copyright {
+    font-size: 14px;
+    line-height: 1.4;
+    opacity: 0.8;
+}
+
+.text-center {
+    text-align: center;
 }
 
 @media (min-width: 768px) {
