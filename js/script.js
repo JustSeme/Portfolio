@@ -1,11 +1,13 @@
 jQuery(document).ready(function () {
 
-	jQuery('#send-form').click(function () {
+	jQuery('#send-form').click(function (e) {
+		e.preventDefault()
 		var form = jQuery(this).closest('form');
 
 		if (form.valid()) {
 			//form.css('opacity', '.5');
 			var actUrl = form.attr('action');
+			console.log(actUrl);
 
 			jQuery.ajax({
 				url: actUrl,
