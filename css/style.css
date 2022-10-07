@@ -1,8 +1,18 @@
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   font-size: 16px;
   line-height: 1.56;
   font-family: "Roboto", sans-serif;
   color: #252525;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .header {
@@ -313,7 +323,7 @@ ul, ol, h1, h2, h3, h4, h5, h6, p {
   -webkit-font-smoothing: antialiased;
 }
 
-*::before {
+*::before, *::after {
   box-sizing: border-box;
 }
 
@@ -523,6 +533,10 @@ button, input, optgroup, select, textarea {
   margin: 0;
 }
 
+.js-footer-form {
+  width: 970px;
+}
+
 .form-wrapper input[type=text], .form-wrapper input[type=email] {
   font-size: 14px;
   font-family: "Latio", sans-serif;
@@ -562,11 +576,14 @@ button, input, optgroup, select, textarea {
   opacity: 1;
 }
 
+/* label.error{
+    display: none!important;
+} */
 .form-wrapper textarea {
   font-size: 14px;
   font-family: "Latio", sans-serif;
   line-height: 1.4;
-  height: 100px;
+  height: 130px;
   width: 100%;
   border: 1px solid #e3e3e3;
   padding: 15px 20px;
@@ -574,7 +591,6 @@ button, input, optgroup, select, textarea {
   resize: none;
   display: block;
   border-radius: 2px;
-  margin-left: 50px;
 }
 
 textarea {
@@ -583,7 +599,6 @@ textarea {
 
 .form-wrapper .submit-holder {
   text-align: right;
-  margin-left: 160px;
 }
 
 button, html input[type=button], input[type=reset], input[type=submit] {
