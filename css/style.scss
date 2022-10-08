@@ -64,23 +64,31 @@ body {
 
 .main-menu {
     text-align: right;
-}
 
-.main-menu ul.list-inline {
-    margin-right: -5px;
-}
+    ul {
 
-.main-menu ul li {
-    margin: 8px 0 10px 20px;
-}
+        &.list-inline {
+            margin-right: -5px;
+        }
 
-.main-menu ul li a {
-    display: inline-block;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    line-height: 1.66;
+        li {
+            margin: 8px 0 10px 20px;
+
+            a {
+                display: inline-block;
+                text-transform: uppercase;
+                font-size: 12px;
+                font-family: "Lato", sans-serif;
+                font-weight: 700;
+                line-height: 1.66;
+            }
+
+            a:hover {
+                color:#3333ff;
+                text-decoration: underline;
+            }
+        }
+    }
 }
 
 a {
@@ -88,7 +96,6 @@ a {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    color: #337ab7;
     text-decoration: none;
     background-color: transparent;
 }
@@ -284,10 +291,25 @@ ul, ol, h1, h2, h3, h4, h5, h6, p {
     font-size: 14px;
     line-height: 1.4;
     margin-bottom: 30px;
-}
 
-.about-me-info p {
-    margin-bottom: 10px;
+    a.fonts-icons {
+        padding-right: 20px;
+        margin-bottom: 5px;
+        min-width: 16px;
+        text-align: center;
+
+        &:hover, &.hover {
+            color: #3333ff;
+        }
+
+        &:active, &.active {
+            color: #3333ff;
+        }
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
 }
 
 .span-title {
@@ -308,13 +330,6 @@ ul, ol, h1, h2, h3, h4, h5, h6, p {
 
 .span-title + .span-icons {
     opacity: 1.0;
-}
-
-.about-me-info a.font-icons {
-    padding-right: 20px;
-    margin-bottom: 5px;
-    min-width: 16px;
-    text-align: center;
 }
 
 .fonts-icons {
@@ -358,11 +373,30 @@ ul, ol, h1, h2, h3, h4, h5, h6, p {
     border: none;
     border-radius: 2px;
     background: #3333ff;
-}
 
-.site-btn.gray-btn {
-    background: #efefef;
-    color: #252525;
+    &.gray-btn {
+        background: #efefef;
+        color: #252525;
+
+        &:hover, &.hover {
+            box-shadow: 10px 10px 20px rgba(#252525, 0.2);
+            color: #252525;
+        }
+    
+        &:active, &.active {
+            background: #c7c7c7;
+            box-shadow: 10px 10px 20px rgba(#252525, 0.2);
+        }
+    }
+
+    &:hover, &.hover {
+        box-shadow: 10px 10px 20px rgba(#252525, 0.2);
+    }
+
+    &:active, &.active {
+        color: #ff4669;
+        box-shadow: 10px 10px 20px rgba(#252525, 0.2);
+    }
 }
 
 .wave-bg {
@@ -453,11 +487,19 @@ hr {
 }
 
 .colored-link {
+    transition: all 0.3s ease;
+    cursor: pointer;
+
     text-transform: uppercase;
     font-size: 14px;
     font-family: "Lato", sans-serif;
     font-weight: 700;
     line-height: 1.4;
+
+    &:hover, &:active, &.hover, &.active {
+        color: #3333ff;
+        text-decoration: underline;
+    }
 }
 
 .portfolio-sort ul li {
@@ -495,21 +537,58 @@ hr {
     position: relative;
     overflow: hidden;
     height: auto;
-}
 
-.portfolio-box .portfolio-img {
-    margin-bottom: 10px;
-    overflow: hidden;
-    border-radius: 2px;
-}
+    a {
+        color: inherit;
+    }
 
-.portfolio-box .portfolio-img img {
-    margin: 0;
-    width: 100%;
-    height: auto;
-    transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -webkit-transition: all 0.5s;
+    .portfolio-img {
+        margin-bottom: 10px;
+        overflow: hidden;
+        border-radius: 2px;
+
+        img {
+            margin: 0;
+            width: 100%;
+            height: auto;
+            transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+        }
+    }
+
+    &:hover .portfolio-img img {
+        transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        
+    }
+
+    .portfolio-name {
+        font-weight: 700;
+        font-family: "Latio", sans-serif;
+        font-size: 18px;
+        line-height: 1.55;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        -o-text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-bottom: 2px;
+    }
+
+    .portfolio-date {
+        opacity: 0.8;
+    }
+
+    &:hover, &.hover, &:active, &.active {
+        .portfolio-name {
+            text-decoration: underline;
+            color: #3333ff;
+        }
+    }
 }
 
 img {
@@ -518,27 +597,81 @@ img {
     border: 0;
 }
 
-.portfolio-box .portfolio-name {
-    font-weight: 700;
-    font-family: "Latio", sans-serif;
-    font-size: 18px;
-    line-height: 1.55;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    -o-text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    margin-bottom: 2px;
-}
+.form-wrapper {
+    .form-group {
+        margin-bottom: 30px;
+        position: relative;
 
-.portfolio-box .portfolio-date {
-    opacity: 0.8;
-}
+        .form-validation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 2px;
+            border: 2px solid #3333ff;
+            pointer-events: none;
+            opacity: 0;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
 
-.form-wrapper .form-group {
-    margin-bottom: 30px;
-    position: relative;
+        span {
+            color: #ff4669;
+            position: absolute;
+            top: 14px;
+            text-align: right;
+            opacity: 0;
+            right: 20px;
+        }
+    }
+
+    input[type=text], input[type=email] {
+        font-size: 14px;
+        font-family: "Latio", sans-serif;
+        line-height: 1.4;
+    
+        height: 50px;
+        width: 100%;
+        border: 1px solid #e3e3e3;
+        border-radius: 2px;
+        padding: 0 20px;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    .submit-holder {
+        text-align: right;
+    }
+
+    textarea {
+        font-size: 14px;
+        font-family: "Latio", sans-serif;
+        line-height: 1.4;
+    
+        height: 130px;
+        width: 100%;
+        border: 1px solid #e3e3e3;
+        padding: 15px 20px;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        resize: none;
+        display: block;
+        border-radius: 2px;
+    }
+
+    input[type=text][data-touched=true]:invalid
+    ~ .form-invalid-icon, .form-wrapper input[type=email][data-touched=true]:invalid
+    ~ .form-invalid-icon {
+        opacity: 1.0;
+    }
+
+    input:hover, textarea:hover {
+        border-color: #3333ff;
+    }
 }
 
 button, input, optgroup, select, textarea {
@@ -551,71 +684,9 @@ button, input, optgroup, select, textarea {
     width: 970px;
 }
 
-.form-wrapper input[type=text], .form-wrapper input[type=email] {
-    font-size: 14px;
-    font-family: "Latio", sans-serif;
-    line-height: 1.4;
-
-    height: 50px;
-    width: 100%;
-    border: 1px solid #e3e3e3;
-    border-radius: 2px;
-    padding: 0 20px;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-
-.form-wrapper .form-group .form-validation {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 2px;
-    border: 2px solid #3333ff;
-    pointer-events: none;
-    opacity: 0;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-.form-wrapper .form-group span {
-    color: #ff4669;
-    position: absolute;
-    top: 14px;
-    text-align: right;
-    opacity: 0;
-    right: 20px;
-}
-
-.form-wrapper input[type=text][data-touched=true]:invalid
-~ .form-invalid-icon, .form-wrapper input[type=email][data-touched=true]:invalid
-~ .form-invalid-icon {
-    opacity: 1.0;
-}
-
 /* label.error{
     display: none!important;
 } */
-
-.form-wrapper textarea {
-    font-size: 14px;
-    font-family: "Latio", sans-serif;
-    line-height: 1.4;
-
-    height: 130px;
-    width: 100%;
-    border: 1px solid #e3e3e3;
-    padding: 15px 20px;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    resize: none;
-    display: block;
-    border-radius: 2px;
-}
 
 textarea {
     overflow: auto;
@@ -624,10 +695,6 @@ textarea {
 .not-worked {
     padding-bottom: 10px;
     color: #ff4669;
-}
-
-.form-wrapper .submit-holder {
-    text-align: right;
 }
 
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
