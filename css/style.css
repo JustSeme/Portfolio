@@ -33,6 +33,11 @@ body {
   padding-right: 15px;
 }
 
+.clearfix:before, .clearfix:after, .dl-horizontal dd:before, .dl-horizontal dd:after, .container:before, .container:after, .container-fluid:before, .container-fluid:after, .row:before, .row:after, .form-horizontal .form-group:before, .form-horizontal .form-group:after, .btn-toolbar:before, .btn-toolbar:after, .btn-group-vertical > .btn-group:before, .btn-group-vertical > .btn-group:after, .nav:before, .nav:after, .navbar:before, .navbar:after, .navbar-header:before, .navbar-header:after, .navbar-collapse:before, .navbar-collapse:after, .pager:before, .pager:after, .panel-body:before, .panel-body:after, .modal-header:before, .modal-header:after, .modal-footer:before, .modal-footer:after {
+  content: " ";
+  display: table;
+}
+
 .row {
   display: flex;
   margin-left: -15px;
@@ -519,7 +524,7 @@ hr {
 .portfolio-box .portfolio-img img {
   margin: 0;
   width: 100%;
-  height: auto;
+  height: 20em;
   transition: all 0.5s;
   -moz-transition: all 0.5s;
   -webkit-transition: all 0.5s;
@@ -624,9 +629,6 @@ button, input, optgroup, select, textarea {
   width: 970px;
 }
 
-/* label.error{
-    display: none!important;
-} */
 textarea {
   overflow: auto;
 }
@@ -634,6 +636,7 @@ textarea {
 .not-worked {
   padding-bottom: 10px;
   color: #ff4669;
+  text-align: right;
 }
 
 button, html input[type=button], input[type=reset], input[type=submit] {
@@ -669,27 +672,124 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 @media screen and (max-width: 991px) {
-  .header {
-    padding: 10px 0 15px;
-  }
   body {
     font-size: 14px;
     line-height: 1.4;
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 1.5;
   }
   .logo {
     font-size: 18px;
     margin-top: 5px;
   }
+  .about-img-wrap {
+    float: none;
+    text-align: center;
+  }
+  .about-img {
+    margin-bottom: 20px;
+  }
+  h1, .modal-body, .modal-title {
+    font-size: 30px;
+    line-height: 1.4;
+  }
+  .modal-body, .modal-title {
+    margin-bottom: 1px;
+  }
+  h4 {
+    font-size: 18px;
+    line-height: 1.55;
+  }
+  .wave-bg .zigzag {
+    display: none;
+  }
+  .section-sidebar, .section-small-padding, .section-sidebar {
+    padding: 0;
+    margin-bottom: 20px;
+    margin-top: 0px;
+  }
+  .about-date {
+    text-align: left;
+  }
+  .col-md-8 > .about-row {
+    margin-bottom: 20px !important;
+  }
+  .header {
+    padding: 10px 0 15px;
+  }
+  .container {
+    padding: 0 20px;
+  }
+  .section {
+    padding: 30px 0;
+  }
+  .section.section-small-padding {
+    padding: 30px 0 5px;
+  }
+  .footer {
+    padding: 15px 0 15px;
+  }
+  #hello {
+    margin-top: 60px;
+  }
+  .about-me-text {
+    padding-top: 5px;
+  }
+  .about-me-title {
+    margin-bottom: 1px;
+  }
+  .section-sidebar h2 {
+    margin-bottom: 2px;
+    padding-bottom: 0px;
+  }
+  .about-me-info {
+    margin-bottom: 10px;
+  }
+  .about-me-info a.mdi img {
+    margin-bottom: 10px;
+  }
+  .advantages-box h4, .about-row .color-h4 {
+    margin-bottom: 4px;
+  }
+  .about-row .about-title {
+    float: none;
+    padding-bottom: 4px;
+  }
+  .about-row .about-info {
+    float: left;
+    padding: 0px;
+    margin-right: 10px;
+  }
   .portfolio-box {
-    max-width: 270px;
+    margin-bottom: 20px;
+  }
+  .portfolio-box .portfolio-name {
+    margin-bottom: 4px;
+  }
+  .portfolio-box .portfolio-img img {
+    height: 35em;
+  }
+  .form-wrapper {
+    padding-top: 10px;
+  }
+  .form-wrapper .form-group {
+    margin-bottom: 20px;
   }
 }
 @media (min-width: 768px) {
   .container {
     width: 750px;
   }
+  .col-sm-6 {
+    width: 50%;
+  }
 }
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
+  .portfolio-box {
+    max-width: 270px;
+  }
   .col-md-8,
 .col-md-4,
 .col-md-3,
@@ -721,6 +821,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
   .col-md-5 {
     width: 41.66666667%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .portfolio .mix {
+    width: 100%;
+  }
+  .about-btns .site-btn {
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .about-btns .site-btn.gray-btn {
+    margin-bottom: 0;
+  }
+  .submit-holder .site-btn {
+    width: 100%;
   }
 }
 @media (min-width: 1200px) {
