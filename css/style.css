@@ -761,7 +761,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   .advantages-box h4, .about-row .color-h4 {
     margin-bottom: 4px;
   }
-  .row {
+  .row:not([class*=portfolio-row]) {
     display: block;
   }
   .about-row .about-title {

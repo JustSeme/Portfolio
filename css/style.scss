@@ -864,7 +864,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
         margin-bottom: 4px;
     }
 
-    .row {
+    .row:not([class*="portfolio-row"]) {
         display: block;
     }
 
