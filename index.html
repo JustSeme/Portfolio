@@ -5,18 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>JustSeme.</title>
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-xs-8 slideInLeftAnimation">
+                <div class="col-md-3 col-xs-8 animate__slideInLeft">
                     <div class="logo">
                         <span class="point">JustSeme</span>
                     </div>
                 </div>
-                <div class="col-md-9 slideInRightAnimation">
+                <div class="col-md-9 hidden-sm hidden-xs animate__slideInRight">
                     <div class="main-menu">
                         <ul class="list-inline">
                             <li>
@@ -40,8 +41,14 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-xs-4 hidden-lg slideInRightAnimation">
-
+                <div class="col-xs-4 hidden-lg hidden-md animate__slideInRight">
+                    <div class="mobile-btn">
+                        <span>
+                            <i class="mdi mdi-menu" aria-hidden="true">
+                                <img src="media/hello-section/mob-menu.png" alt="">
+                            </i>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -51,7 +58,7 @@
         <div class="close-mob-menu">
             <span>
                 <i class="mdi mdi-close" aria-hidden="true">
-                    ::before
+                    <img src="media/hello-section/close-mob-menu.svg" alt="">
                 </i>
             </span>
         </div>
@@ -142,7 +149,7 @@
     <section id="skills" class="section">
         <div class="container">
             <div class="row wave-bg">
-                <div class="zigzag wow slideInLeft">
+                <div class="zigzag wow animate__slideInLeft">
                     <img src="media/svg-icon.svg" alt>
                 </div>
                 <div class="col-md-4 wow slideInLeft">
@@ -157,7 +164,7 @@
                 </div>
                 <div class="col-md-8">
                     <div class="row">
-                        <div class="col-md-6 wow zoomIn">
+                        <div class="col-md-6 wow animate__zoomIn">
                             <div class="advantages-box">
                                 <h4>Frontend Development</h4>
                                 <div class="opacity-box">
@@ -165,7 +172,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 wow zoomIn">
+                        <div class="col-md-6 wow animate__zoomIn">
                             <div class="advantages-box">
                                 <h4>Мои личностные качества</h4>
                                 <div class="opacity-box">
@@ -183,10 +190,10 @@
     <section id="experience" class="section">
         <div class="container">
             <div class="row wave-bg">
-                <div class="zigzag wow slideInLeft">
+                <div class="zigzag wow animate__slideInLeft">
                     <img src="media/svg-icon.svg" alt>
                 </div>
-                <div class="col-md-4 wow slideInLeft">
+                <div class="col-md-4 wow animate__slideInLeft">
                     <div class="section-sidebar">
                         <h2>
                             <span class="point">Experience</span>
@@ -197,7 +204,7 @@
                     </div>
                 </div>
                 <div class="col-md-8 right-box">
-                    <div class="row wow zoomIn">
+                    <div class="row wow animate__zoomIn">
                         <div class="col-md-12">
                             <div class="about-row">
                                 <h4 class="about-title">Frontend Developer</h4>
@@ -218,7 +225,7 @@
     <section id="education" class="section">
         <div class="container">
             <div class="row wave-bg">
-                <div class="zigzag wow slideInLeft">
+                <div class="zigzag wow animate__slideInLeft">
                     <img src="media/svg-icon.svg" alt>
                 </div>
                 <div class="col-md-4 wow slideInLeft">
@@ -232,7 +239,7 @@
                     </div>
                 </div>
                 <div class="col-md-8 right-box">
-                    <div class="row wow zoomIn">
+                    <div class="row wow animate__zoomIn">
                         <div class="col-md-12">
                             <div class="about-row">
                                 <h4 class="about-title">Программирование</h4>
@@ -245,7 +252,7 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="row wow zoomIn">
+                    <div class="row wow animate__zoomIn">
                         <div class="col-md-12">
                             <div class="about-row">
                                 <h4 class="about-title">Программирование</h4>
@@ -267,7 +274,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="section-title wow slideInLeft">
+                    <div class="section-title wow animate__slideInLeft">
                         <h2>
                             <span class="point">Portfolio</span>
                         </h2>
@@ -278,10 +285,10 @@
                 <div class="col-md-12">
                     <div class="portfolio" id="MixItUp05CDFB">
                         <div class="row block-display">
-                            <div class="col-md-3 col-sm-6 col-xs-6 mix wow flipInX frontend">
+                            <div class="col-md-3 col-sm-6 col-xs-6 mix wow animate__flipInX">
                                 <a href="https://react-way-of-samurai.vercel.app/" target="_blank" class="portfolio-box">
                                     <div class="portfolio-img">
-                                        <img src="media/portfolio-images/samuraiJS.PNG" alt>
+                                        <img src="media/portfolio-images/samuraiJS.jpg" alt>
                                     </div>
                                     <div class="portfolio-name">
                                         <span>Social-network SamuraiJS</span>
@@ -291,10 +298,10 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-md-3 col-sm-6 col-xs-6 mix wow flipInX web-site">
+                            <div class="col-md-3 col-sm-6 col-xs-6 mix wow animate__flipInX">
                                 <a href="https://justsemen.github.io/Web-Developer-maket/" target="_blank" class="portfolio-box">
                                     <div class="portfolio-img">
-                                        <img src="media/portfolio-images/webMaket.PNG" alt>
+                                        <img src="media/portfolio-images/webMaket.jpg" alt>
                                     </div>
                                     <div class="portfolio-name">
                                         <span>Web-Developer Maket</span>
@@ -304,10 +311,10 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-md-3 col-sm-6 col-xs-6 mix wow flipInX frontend">
+                            <div class="col-md-3 col-sm-6 col-xs-6 mix wow animate__flipInX">
                                 <a href="https://justsemen.github.io/Graphics_editor/" target="_blank" class="portfolio-box">
                                     <div class="portfolio-img">
-                                        <img src="media/portfolio-images/pixelArt.PNG" alt>
+                                        <img src="media/portfolio-images/pixelArt.jpg" alt>
                                     </div>
                                     <div class="portfolio-name">
                                         <span>Graphics Editor</span>
@@ -317,10 +324,10 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-md-3 col-sm-6 col-xs-6 mix wow flipInX web-site">
+                            <div class="col-md-3 col-sm-6 col-xs-6 mix wow animate__flipInX">
                                 <a href="https://justsemen.github.io/Clickr/" target="_blank" class="portfolio-box">
                                     <div class="portfolio-img">
-                                        <img src="media/portfolio-images/clicker.PNG" alt>
+                                        <img src="media/portfolio-images/clicker.jpg" alt>
                                     </div>
                                     <div class="portfolio-name">
                                         <span>Clicker</span>
@@ -330,23 +337,23 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-md-3 col-sm-6 col-xs-6 mix wow flipInX web-site">
+                            <div class="col-md-3 col-sm-6 col-xs-6 mix wow animate__flipInX">
                                 <a href="https://justsemen.github.io/GuessTheNumber/     " target="_blank" class="portfolio-box">
                                     <div class="portfolio-img">
-                                        <img src="media/portfolio-images/guessTheNumber.PNG" alt>
+                                        <img src="media/portfolio-images/riddle.jpg" alt>
                                     </div>
                                     <div class="portfolio-name">
-                                        <span>Guess the number</span>
+                                        <span>Riddle</span>
                                     </div>
                                     <div class="portfolio-date">
                                         <span>05 Фев 2022</span>
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-md-3 col-sm-6 col-xs-6 mix wow flipInX web-site">
+                            <div class="col-md-3 col-sm-6 col-xs-6 mix wow animate__flipInX">
                                 <a href="https://justsemen.github.io/BoomGame/" target="_blank" class="portfolio-box">
                                     <div class="portfolio-img">
-                                        <img src="media/portfolio-images/boomGame.PNG" alt>
+                                        <img src="media/portfolio-images/boomGame.jpg" alt>
                                     </div>
                                     <div class="portfolio-name">
                                         <span>BoomGame</span>
@@ -356,10 +363,10 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-md-3 col-sm-6 col-xs-6 mix wow flipInX web-site">
+                            <div class="col-md-3 col-sm-6 col-xs-6 mix wow animate__flipInX">
                                 <a href="https://justsemen.github.io/ladder/" target="_blank" class="portfolio-box">
                                     <div class="portfolio-img">
-                                        <img src="media/portfolio-images/ladder.PNG" alt>
+                                        <img src="media/portfolio-images/ladder.jpg" alt>
                                     </div>
                                     <div class="portfolio-name">
                                         <span>Ladder</span>
@@ -380,7 +387,7 @@
     <section id="contact" class="section">
         <div class="container">
             <div class="row wave-bg">
-                <div class="zigzag wow slideInLeft">
+                <div class="zigzag wow animate__slideInLeft">
                     <img src="media/svg-icon.svg" alt>
                 </div>
                 <div class="col-md-4 wow slideInLeft">
@@ -393,7 +400,7 @@
                         </div>
                     </div>
                 </div>
-                <form action="sender.php" class="wow slideInRight js-footer-form">
+                <form action="sender.php" class="wow animate__slideInRight js-footer-form">
                     <div class="form-wrapper">
                         <div class="col-md-3">
                             <div class="form-group">
@@ -443,7 +450,9 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/theme.js"></script>
 </body>
 </html>
