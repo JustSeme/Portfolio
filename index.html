@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>JustSeme.</title>
 </head>
@@ -136,7 +137,7 @@
                             </p>
                         </div>
                         <div class="about-btns">
-                            <a href="#" data-toggle="modal" data-target="#contact-modal" class="site-btn">Contact me</a>
+                            <a href="#" class="site-btn js-contact-modal">Contact me</a>
                             <a href="downloadFile" class="site-btn gray-btn">Download CV</a>
                         </div>
                     </div>
@@ -448,6 +449,57 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal" >
+        <div class="modalContent">
+            <div class="modalHeader">
+                <h1 class="modalTitle">
+                    <span class="point">Let's work together</span>
+                </h1>
+                <div class="opacity-box">
+                    <p>Работаешь над чем-то грандиозным? Я буду рад помочь тебе в этом! Напиши мне на почту и давай приступим прямо сейчас. Just do it.</p>
+                </div>
+            </div>
+            <div className="modalBody">
+                <form action="sender.php" class="wow animate__slideInRight js-modal-form">
+                    <div class="form-wrapper">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input name="name" type="text" placeholder="Имя" required data-touched="false" class="form-field js-field-name">
+                                <span class="form-invalid-icon">
+                                    <i class="mdi mdi-close" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <input name="email" type="email" placeholder="E-mail" required data-touched="false" class="form-field js-field-email">
+                                <span class="form-invalid-icon">
+                                    <i class="mdi mdi-close" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <textarea name="text" class="form-filed js-field-message" placeholder="Сообщение" required></textarea>
+                                <span class="form-validation"></span>
+                            </div>
+                            <div class="not-worked">
+                                Форма отправки сообщения не работает потому что у автора нет денег на домен :-\. Напишите мне в телеграмм!
+                                <a href="https://t.me/justseme" target="_blank" class="mdi fonts-icons">
+                                    <img src="media/hello-section/telegram.png"></img>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modalFooter">
+                <div class="about-btns">
+                    <button type="button" id="send-form-modal" class="site-btn">Send message</button>
+                    <button type="button" id="back-to-cv" class="site-btn gray-btn">Back to CV</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="js/wow.min.js"></script>

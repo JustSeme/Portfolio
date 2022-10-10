@@ -24,4 +24,13 @@ $(document).ready(function () {
             scrollTop: $(anchor.attr('href')).offset().top
         }, 1000)
     })
+
+    $('.js-contact-modal').on('click', (e) => {
+        e.preventDefault()
+        $('.modal').addClass('show')
+        $('.modal').on('click', () => $('.modal').removeClass('show'))
+        $('#back-to-cv').on('click', () => $('.modal').removeClass('show'))
+        $('.modalContent').on('click', (e) => e.stopPropagation())
+    })
+
 })

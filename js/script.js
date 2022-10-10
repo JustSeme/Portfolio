@@ -1,8 +1,13 @@
 jQuery(document).ready(function () {
 
-	jQuery('#send-form').click(function (e) {
+	jQuery('#send-form, #send-form-modal').click(function (e) {
 		e.preventDefault()
-		var form = jQuery(this).closest('form');
+		let form
+		if (jQuery(this).is('#send-form')) {
+			form = jQuery(this).closest('form');
+		} else {
+			form = $('.js-modal-form')
+		}
 
 		if (form.valid()) {
 			//form.css('opacity', '.5');

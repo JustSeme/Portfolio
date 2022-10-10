@@ -1,0 +1,50 @@
+.modal {
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    pointer-events: none;
+}
+
+.modal.show {
+    opacity: 1;
+    pointer-events: visible;
+}
+
+.modal.show .modalContent {
+    transform: translateY(0);
+}
+
+.modalContent {
+    max-width: 90%;
+    background-color: #fff;
+    transform: translateY(-200px);
+    transition: all 0.4s ease-in-out;
+    border-radius: 10px;
+}
+
+.modalHeader {
+    padding: 10px;
+}
+
+.modalFooter {
+    padding: 10px;
+}
+
+.modalTitle {
+    margin: 0;
+}
+
+.modalBody {
+    padding: 10px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
