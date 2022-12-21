@@ -25,6 +25,8 @@
 
 .modalContent {
     max-width: 90%;
+    padding: 10px;
+    padding-right: 0px;
     background-color: #fff;
     transform: translateY(-200px);
     transition: all 0.4s ease-in-out;
