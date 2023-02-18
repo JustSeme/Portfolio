@@ -1,6 +1,6 @@
 jQuery(document).ready(function () {
 
-	jQuery('#send-form, #send-form-modal').click(function (e) {
+	jQuery('#send-form, #send-form-modal').click(async function (e) {
 		e.preventDefault()
 		let form
 		if (jQuery(this).is('#send-form')) {
@@ -11,11 +11,13 @@ jQuery(document).ready(function () {
 
 		if (form.valid()) {
 			//form.css('opacity', '.5');
-			var actUrl = form.attr('action');
+			const data = await fetch('https://email-sender-kappa.vercel.app/portfolio-api')
+			console.log(data);
+			/* var actUrl = form.attr('action');
 
 			jQuery.ajax({
 				url: actUrl,
-				type: 'post',
+				type: 'get',
 				dataType: 'html',
 				data: form.serialize(),
 				success: function (data) {
@@ -27,7 +29,7 @@ jQuery(document).ready(function () {
 				error: function () {
 					form.find('.status').html('серверная ошибка');
 				}
-			});
+			}); */
 		}
 	});
 
