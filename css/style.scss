@@ -17,6 +17,10 @@ body {
     box-sizing: border-box;
 }
 
+.error {
+    color: rgb(185, 0, 0);
+}
+
 .header {
     padding: 20px 0 20px;
     position: fixed;
@@ -704,12 +708,6 @@ button, input, optgroup, select, textarea {
 
 textarea {
     overflow: auto;
-}
-
-.not-worked {
-    padding-bottom: 10px;
-    color: #ff4669;
-    text-align: left;
 }
 
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
