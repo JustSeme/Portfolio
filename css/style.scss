@@ -450,7 +450,7 @@ h2 {
 }
 
 .advantages-box {
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 }
 
 .advantages-box h4 {
@@ -471,24 +471,24 @@ hr {
     border-top: 1px soild #eee;
 }
 
-.about-row .about-title {
-    float: left;
-    margin-right: 10px;
-}
+.about-row {
 
-.about-row .about-info {
-    padding: 2px 0;
-    opacity: 0.8;
-}
-
-.about-row .about-info + p {
-    opacity: 0.8;
-}
-
-.about-row .opacity-box {
-    margin-top: 10px;
-    font-style: italic;
-}
+    .about-title {
+        float: left;
+        margin-right: 10px;
+    }
+    .about-info {
+        padding: 2px 0;
+        opacity: 0.8;
+        & + p {
+            opacity: 0.8;
+        }
+    }
+    .opacity-box {
+        margin-top: 10px;
+        font-style: italic;
+    }
+} 
 
 .section.section-small-padding {
     padding: 40px 0 10px;
