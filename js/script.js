@@ -20,8 +20,8 @@ jQuery(document).ready(function () {
 			const currentValues = form.serializeArray()
 			const message = `Привет от ${currentValues[0].value}. Он написал: ${currentValues[2].value}. Свяжись с ним через: ${currentValues[1].value}`
 
-			const bot = '6098281339:AAGJ16BQ736dsxfg2889xql2492sVZJRZvE' //please dont still it
-			const chatId = '-918377010'
+			const bot = '7418686740:AAFX0wDTkOJZT4US5Z21y_s5H_UDiiHsop4' //please dont still it
+			const chatId = '789878593'
 			const actUrl = `https://api.telegram.org/bot${bot}/sendMessage?chat_id=${chatId}&text=${message}`
 
 			jQuery.ajax({
